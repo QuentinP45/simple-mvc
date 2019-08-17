@@ -2,7 +2,7 @@
 
 namespace config;
 
-class defineControllers
+class DefineControllers
 {
     // DEFINE CONSTANT WITH CONTROLLER PARAMETER VALUE
     public function __construct()

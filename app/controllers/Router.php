@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Config\DefineControllers;
+use Config\DefineConnexionSettings;
 use App\Controllers\HomeController;
 use Exception;
 
@@ -13,6 +14,7 @@ class Router
     public function __construct()
     {
         $defineControllers = new defineControllers;
+        $defineConnexionSettings = new defineConnexionSettings;
 
         try {
             if (isset($_GET['url'])) {
