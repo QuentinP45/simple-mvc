@@ -24,7 +24,7 @@ class Router
 
                     $controller = $urlParams[0];
 
-                    // GET RID OF CONTROLLER PARAMETER
+                    // URL PARAMS = [ACTION, ID]
                     array_shift($urlParams);
 
                     $requestMethod = $_SERVER['REQUEST_METHOD'];
@@ -32,7 +32,7 @@ class Router
                     // AUTOLOAD REQUIRED CONTROLLER
                     switch ($controller) {
                         case HOME:
-                        $this->controller = new HomeController($urlParams, $requestMethod);
+                        $this->controller = new HomeController;
                         break;
 
                         default:
