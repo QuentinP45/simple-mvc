@@ -48,7 +48,9 @@ class Router
                 throw new Exception('Router: pas de paramètre "url", page introuvable');
             }
         } catch (Exception $e) {
-            echo $e->getMessage();
+            $view = new View;
+
+            echo $view->generateView('errorView', $e->getMessage());
         }
     }
 }
