@@ -9,9 +9,9 @@ class Article
     private $date;
     private $content;
 
-    public function __construct(array $articles)
+    public function __construct(object $article)
     {
-        foreach ($articles as $key => $value) {
+        foreach ($article as $key => $value) {
             $method = 'set' . ucFirst($key);
 
             if (method_exists($this, $method)) {
