@@ -1,0 +1,13 @@
+{
+    "name": "quentin/simple-mvc",
+    "authors": [
+        {
+            "name": "quentin.picart",
+            "email": "quentin.picart@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"App\\": "app/"}
+    }
+}
