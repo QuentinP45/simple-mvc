@@ -5,6 +5,7 @@ namespace App\Controllers;
 use Config\DefineControllers;
 use Config\DefineConnexionSettings;
 use App\Controllers\HomeController;
+use App\Views\View;
 use Exception;
 
 class Router
@@ -47,7 +48,7 @@ class Router
                 throw new Exception('Router: pas de paramètre "url", page introuvable');
             }
         } catch (Exception $e) {
-
+            echo $e->getMessage();
         }
     }
 }

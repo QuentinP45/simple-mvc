@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Article;
 use App\Models\ArticleManager;
+use App\Views\View;
 
 class HomeController
 {   
@@ -14,6 +15,8 @@ class HomeController
 
         $articles = $articleManager->getLastArticles('article', 'Article', 3);
         
-        // TO DO: DISPLAY HOME VIEW
+        // DISPLAY HOME VIEW
+        $view = new View;
+        echo $view->generateView('home\homeView', $articles);
     }
 }
